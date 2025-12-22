@@ -1,64 +1,111 @@
-import Image from "next/image";
+"use client";
+
+import { motion } from "framer-motion";
+import { Navbar } from "@/components/Navbar";
+import { ScrollProgress } from "@/components/ScrollProgress";
+import { Experience } from "@/components/Experience";
+import { Projects } from "@/components/Projects";
+import { Skills } from "@/components/Skills";
+import { Timeline } from "@/components/Timeline";
+import { Contact } from "@/components/Contact";
+
+const sectionVariant = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="relative min-h-screen overflow-x-hidden">
+      <Navbar />
+      <ScrollProgress />
+
+      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_top,_rgba(96,165,250,0.25),_transparent_60%),_radial-gradient(circle_at_bottom,_rgba(56,189,248,0.25),_transparent_60%)]" />
+
+      <main className="relative mx-auto max-w-7xl pb-24 pt-28 space-y-24">
+        {/* HERO */}
+        <motion.section
+          id="hero"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="rounded-3xl border border-white/5 bg-white/5 p-8 backdrop-blur-xl shadow-[0_0_80px_rgba(15,23,42,0.9)]"
+        >
+          <p className="text-base uppercase tracking-[0.3em] text-cyan-300">
+            Frontend Lead • Full‑Stack Developer
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+          <h1 className="mt-4 text-5xl font-semibold md:text-6xl">
+            Hi, I&apos;m <span className="text-cyan-300">Ankush</span>.
+          </h1>
+          <p className="mt-6 max-w-xl text-lg text-slate-200 leading-relaxed">
+            Building real‑time dashboards, micro‑frontends, and high‑performance web
+            apps using React, Next.js, Socket.IO, and modern frontend architecture.
+          </p>
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <a
+              href="#projects"
+              className="rounded-full bg-cyan-400 px-8 py-3 text-base font-medium text-slate-950 shadow-lg shadow-cyan-500/40 transition hover:-translate-y-0.5 hover:bg-cyan-300"
+            >
+              View projects
+            </a>
+            <a
+              href="#contact"
+              className="rounded-full border border-white/20 px-8 py-3 text-base font-medium text-slate-100/90 hover:border-cyan-300 hover:text-cyan-200"
+            >
+              Contact
+            </a>
+          </div>
+        </motion.section>
+
+        <motion.section
+          id="experience"
+          variants={sectionVariant}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ amount: 0.2, once: true }}
+        >
+          <Experience />
+        </motion.section>
+
+        <motion.section
+          id="projects"
+          variants={sectionVariant}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ amount: 0.2, once: true }}
+        >
+          <Projects />
+        </motion.section>
+
+        <motion.section
+          id="skills"
+          variants={sectionVariant}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ amount: 0.2, once: true }}
+        >
+          <Skills />
+        </motion.section>
+
+        <motion.section
+          id="timeline"
+          variants={sectionVariant}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ amount: 0.2, once: true }}
+        >
+          <Timeline />
+        </motion.section>
+
+        <motion.section
+          id="contact"
+          variants={sectionVariant}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ amount: 0.2, once: true }}
+        >
+          <Contact />
+        </motion.section>
       </main>
     </div>
   );
