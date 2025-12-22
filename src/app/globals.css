@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-slate-950 text-slate-50;
+}
+
+/* HTML5 orange */
+.skill-html5 { color: #E34F26; }
+
+/* CSS3 blue */
+.skill-css3 { color: #1572B6; }
+
+/* JavaScript yellow */
+.skill-js { color: #F7DF1E; }
+
+/* TypeScript blue */
+.skill-ts { color: #3178C6; }
+
+/* React cyan */
+.skill-react { color: #61DAFB; }
+
+/* Node.js green */
+.skill-node { color: #339933; }
