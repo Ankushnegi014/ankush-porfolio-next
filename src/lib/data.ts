@@ -15,7 +15,6 @@ import {
   SiDocker,
   SiGit,
   SiGithub,
-  SiGitlab,
   SiWebpack,
   SiVite,
   SiMongodb,
@@ -23,6 +22,8 @@ import {
   SiMysql,
   SiSocketdotio,
   SiLinkedin,
+  SiSpring,
+  SiHibernate,
 } from "react-icons/si";
 import { MdDesignServices, MdSearch } from "react-icons/md";
 import { IconType } from "react-icons";
@@ -30,24 +31,26 @@ import { IconType } from "react-icons";
 export const experience = [
   {
     company: "Vecomocon Technologies",
-    title: "Frontend Lead",
-    period: "Jun 2024 – Present",
+    title: "Full Stack Engineer",
+    period: "June 2024 – Feb 2026",
     location: "Noida",
     bullets: [
-      "Developed and maintained interactive dashboards for real-time data visualization using React.js, Redux, and ECharts",
-      "Integrated Socket.IO for live device telemetry updates and real-time notifications",
-      "Implemented user, organization, and role-based access control modules for secure multi-tenant management",
+      "Developed and maintained user management and authorization management modules.",
+      "Added pagination and advanced filtering to the get all users API, improving performance and user experience for large datasets.",
+      "Developed and maintained interactive dashboards for real-time data visualization using React.js, Redux, and ECharts.",
+      "Integrated Socket.IO for live device telemetry updates and real-time notifications.",
+      "Implemented user, organization, and role-based access control modules for secure multi-tenant management.",
       "Optimized React.js frontend for handling large datasets using virtualization and pagination to enhance performance and user experience.",
       "Enhanced frontend performance by optimizing state management and reducing API call latency."
     ],
   },
   {
     company: "Bluepi Consulting",
-    title: "Engineer",
-    period: "Oct 2023 – Jun 2024",
+    title: "Software Engineer",
+    period: "Oct 2023 – June 2024",
     location: "Gurugram",
     bullets: [
-      "Developed and maintained modular React.js micro frontends for different financial modules (e.g. Payments, transactions, customer onboarding, documents) to support independent deployments.",
+      "Developed and maintained modular React.js micro frontends for different financial modules to support independent deployments.",
       "Implemented Micro Frontend architecture using tools like Module Federation, ensuring seamless integration of independently developed frontend modules."
     ],
   },
@@ -58,6 +61,7 @@ export const experience = [
     location: "Gurugram",
     bullets: [
       "Developed and optimized a social media platform using React.js and Node.js, enabling real-time user engagement for a U.S.-based audience.",
+      "Contributed to the design and development of the HP1T application using Angular for the frontend, Java for the backend, and NoSQL for database management, delivering scalable and maintainable features.",
       "Enhanced frontend performance with lazy loading, memoization, and Redux state optimization, improving page load speed.",
       "Awarded Star of the Quarter for exceptional project delivery, effective mentorship, and leadership in improving code quality through detailed reviews and issue resolution.",
     ],
@@ -68,7 +72,7 @@ export const experience = [
     period: "Sept 2021 – Mar 2022",
     location: "Mohali",
     bullets: [
-      "Maintained Angular and React-based web applications.",
+      "Developed and maintained web applications using Angular and React.js.",
     ],
   },
 ];
@@ -147,16 +151,16 @@ export const skills: Record<string, Array<{ name: string; icon: IconType }>> = {
   core: [
     { name: "HTML", icon: SiHtml5 },
     { name: "CSS", icon: SiCss3 },
-    { name: "JavaScript", icon: SiJavascript },
+    { name: "JavaScript (ES6+)", icon: SiJavascript },
     { name: "TypeScript", icon: SiTypescript },
     { name: "Responsive Design", icon: MdDesignServices },
-    { name: "SEO", icon: MdSearch },
+    { name: "SEO Optimization", icon: MdSearch },
   ],
-  frontend: [
-    { name: "React", icon: SiReact },
+  "Frontend/Libraries": [
+    { name: "React.js", icon: SiReact },
     { name: "Next.js", icon: SiNextdotjs },
     { name: "Angular", icon: SiAngular },
-    { name: "Redux Toolkit", icon: SiRedux },
+    { name: "Redux/Redux Toolkit", icon: SiRedux },
     { name: "React Query", icon: SiReactquery },
     { name: "Tailwind CSS", icon: SiTailwindcss },
     { name: "Material UI", icon: SiMui },
@@ -165,16 +169,16 @@ export const skills: Record<string, Array<{ name: string; icon: IconType }>> = {
   backend: [
     { name: "Node.js", icon: SiNodedotjs },
     { name: "Express.js", icon: SiExpress },
+    { name: "Spring Boot", icon: SiSpring },
+    { name: "Hibernate", icon: SiHibernate },
   ],
-  devops: [
-    { name: "Docker", icon: SiDocker },
-    { name: "Git", icon: SiGit },
-    { name: "GitHub", icon: SiGithub },
-    { name: "GitLab", icon: SiGitlab },
+  "Build/DevOps": [
     { name: "Webpack", icon: SiWebpack },
     { name: "Vite", icon: SiVite },
+    { name: "Docker", icon: SiDocker },
+    { name: "Git/GitHub/GitLab", icon: SiGit },
   ],
-  db: [
+  databases: [
     { name: "MongoDB", icon: SiMongodb },
     { name: "PostgreSQL", icon: SiPostgresql },
     { name: "MySQL", icon: SiMysql },
@@ -184,8 +188,8 @@ export const skills: Record<string, Array<{ name: string; icon: IconType }>> = {
 export const timeline = [
   { year: "2021", label: "Frontend Intern – Meander Software" },
   { year: "2022", label: "Full Stack Dev – Oodles Technologies" },
-  { year: "2023", label: "Engineer – Bluepi Consulting" },
-  { year: "2024", label: "Frontend Lead – Vecomocon Technologies" },
+  { year: "2023", label: "Software Engineer – Bluepi Consulting" },
+  { year: "2024", label: "Full Stack Engineer – Vecomocon Technologies" },
 ];
 
 export const contactInfo = {

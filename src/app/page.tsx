@@ -32,7 +32,7 @@ export default function Home() {
           className="rounded-3xl border border-white/5 bg-white/5 p-8 backdrop-blur-xl shadow-[0_0_80px_rgba(15,23,42,0.9)]"
         >
           <p className="text-base uppercase tracking-[0.3em] text-cyan-300">
-            Frontend Lead • Full‑Stack Developer
+            Full Stack Engineer
           </p>
           <h1 className="mt-4 text-5xl font-semibold md:text-6xl">
             Hi, I&apos;m <span className="text-cyan-300">Ankush</span>.
