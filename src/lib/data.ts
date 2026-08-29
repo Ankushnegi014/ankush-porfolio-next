@@ -30,6 +30,18 @@ import { IconType } from "react-icons";
 
 export const experience = [
   {
+    company: "Ascent Business Solutions",
+    title: "Solution Engineer",
+    period: "Feb 2026 – Present",
+    location: "Gurugram",
+    bullets: [
+      "Developed end-to-end features for a banking support application using Angular and Java Spring Boot, integrating RESTful and SOAP bank APIs to manage deposit and payment modules with secure, high-reliability transaction flows.",
+      "Architected and optimized feature workflows and application performance in a financial-grade Angular SPA, reducing user flow friction and improving component rendering efficiency through lazy loading and modular architecture.",
+      "Collaborated on full-cycle frontend development of a bank API-integrated support platform, delivering new customer-facing features while maintaining compliance with financial data handling standards and ensuring cross-browser compatibility.",
+      "Drove UI performance optimization across critical payment and deposit journeys by refactoring Angular components, streamlining data-binding logic, and improving state management to enhance overall application responsiveness."
+    ],
+  },
+  {
     company: "Vecomocon Technologies",
     title: "Full Stack Engineer",
     period: "June 2024 – Feb 2026",
@@ -57,7 +69,7 @@ export const experience = [
   {
     company: "Oodles Technologies",
     title: "Full Stack Developer",
-    period: "Mar 2022 – Sept 2023",
+    period: "Sept 2021 – Sept 2023",
     location: "Gurugram",
     bullets: [
       "Developed and optimized a social media platform using React.js and Node.js, enabling real-time user engagement for a U.S.-based audience.",
@@ -65,16 +77,7 @@ export const experience = [
       "Enhanced frontend performance with lazy loading, memoization, and Redux state optimization, improving page load speed.",
       "Awarded Star of the Quarter for exceptional project delivery, effective mentorship, and leadership in improving code quality through detailed reviews and issue resolution.",
     ],
-  },
-  {
-    company: "Meander Software",
-    title: "Frontend Developer (Intern)",
-    period: "Sept 2021 – Mar 2022",
-    location: "Mohali",
-    bullets: [
-      "Developed and maintained web applications using Angular and React.js.",
-    ],
-  },
+  }
 ];
 
 export const projects = [
