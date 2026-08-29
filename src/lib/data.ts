@@ -189,10 +189,10 @@ export const skills: Record<string, Array<{ name: string; icon: IconType }>> = {
 };
 
 export const timeline = [
-  { year: "2021", label: "Frontend Intern – Meander Software" },
-  { year: "2022", label: "Full Stack Dev – Oodles Technologies" },
+  { year: "2021", label: "Full Stack Dev – Oodles Technologies" },
   { year: "2023", label: "Software Engineer – Bluepi Consulting" },
   { year: "2024", label: "Full Stack Engineer – Vecomocon Technologies" },
+  { year: "2026", label: "Solution Engineer – Ascent Business Solutions" },
 ];
 
 export const contactInfo = {
